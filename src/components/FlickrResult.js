@@ -3,7 +3,7 @@ import React from 'react'
 const FlickrResult = ({url}) => {
 	console.log("creating a FlickrResult with url: " + url);
 	return (
-		<div className="col-md-4">
+		<div className="search-result">
 			<a href={url} target="_blank" className="thumbnail">
 				<img src={url} alt="..." className="img-responsive"/>
 			</a>

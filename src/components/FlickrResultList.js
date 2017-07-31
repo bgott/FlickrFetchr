@@ -2,7 +2,7 @@ import React from 'react';
 import FlickrResult from './FlickrResult'
 
 
-const FlickrResultList = ({urls}) => {
+const FlickrResultList = ({urls,search_tag}) => {
 	const items = urls.map((photo_url,i) => {
 		return ( 
 			<FlickrResult 
@@ -13,7 +13,7 @@ const FlickrResultList = ({urls}) => {
 	})
 
 	return (
-		<div className="row">{items}</div>
+		<div className="search-result-list">{items}</div>
 	);
 }
 

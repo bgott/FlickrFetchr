@@ -14,7 +14,7 @@ class App extends React.Component {
       <div>
       	<Title />
         <SearchBar onSubmit={this.props.actions.submit_search} />
-        <FlickrResultList urls={this.props.urls} />
+        <FlickrResultList urls={this.props.urls} search_tag={this.props.search_tag}/>
       </div>
     );
   }
@@ -22,7 +22,8 @@ class App extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    urls: state.urls
+    urls: state.urls,
+    search_tag:state.search_tag
   };
 }
 

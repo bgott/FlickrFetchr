@@ -1,3 +1,3 @@
-Sample project built to get feet wet with React, and Redux. 
+Mini project to serve as a javascript refresh and get my feet wet with both React and Redux. 
 
-Single page app that allows users to search for photo tags hosted on Flickr.
+Single page web app allowing users to search for public photos, by tag(s), on the Flickr public database. 
