@@ -2,6 +2,8 @@ function urls(state = [], action) {
 	switch(action.type) {
 		case 'RETURN_SEARCH':
 			return action.response.data.photos.photo.map(construct_url);
+		case 'CLEAR_RESULTS':
+			return [];
 		default:
 			return state;
 	}

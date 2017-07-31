@@ -13,7 +13,9 @@ const FlickrResultList = ({urls,search_tag}) => {
 	})
 
 	return (
-		<div className="search-result-list">{items}</div>
+		<div>
+			<div className="search-result-list">{items}</div>
+		</div>
 	);
 }
 

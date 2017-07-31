@@ -12,6 +12,7 @@ export const FETCH_DATA = "FETCH_DATA";
 export const SEARCH_TAG = "SEARCH_TAG";
 export const SUBMIT_SEARCH = "SUBMIT_SEARCH";
 export const RETURN_SEARCH = "RETURN_SEARCH";
+export const CLEAR_RESULTS = "CLEAR_RESULTS";
 
 // export const SEARCH_SUCCESS = "SEARCH_SUCCESS";
 // export const SEARCH_FAILURE = "SEARCH_FAILURE";
@@ -26,6 +27,10 @@ export function return_search(response = {}) {
 
 export function search_tag(tag = "") {
 	return { type: SEARCH_TAG, tag }
+}
+
+export function clear_results() {
+	return { type: CLEAR_RESULTS }
 }
 
 /*
@@ -43,6 +48,7 @@ export function fetch_data(tag = "") {
 
 export function submit_search(tag = "") {
 	return function (dispatch) {
+		dispatch(clear_results());
 		dispatch(search_tag(tag));
 		dispatch(fetch_data(tag));
 	}
