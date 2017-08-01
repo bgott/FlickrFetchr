@@ -12,8 +12,16 @@ const FlickrResultList = ({urls,search_tag}) => {
 		);
 	})
 
+	let label = null;
+	if (search_tag) {
+		label = `Showing results for "${search_tag}"...`;
+	}
+
 	return (
 		<div>
+			<div className="search-result-label text-center">
+				<h4>{label}</h4>
+			</div>
 			<div className="search-result-list">{items}</div>
 		</div>
 	);

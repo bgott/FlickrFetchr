@@ -8,12 +8,12 @@ export const photo_size = "c"; // (large) 1600x1600 on longest side
  * action types
  */
 
-export const FETCH_DATA = "FETCH_DATA";
 export const SEARCH_TAG = "SEARCH_TAG";
-export const SUBMIT_SEARCH = "SUBMIT_SEARCH";
 export const RETURN_SEARCH = "RETURN_SEARCH";
 export const CLEAR_RESULTS = "CLEAR_RESULTS";
 
+// export const FETCH_DATA = "FETCH_DATA";
+// export const SUBMIT_SEARCH = "SUBMIT_SEARCH";
 // export const SEARCH_SUCCESS = "SEARCH_SUCCESS";
 // export const SEARCH_FAILURE = "SEARCH_FAILURE";
 
