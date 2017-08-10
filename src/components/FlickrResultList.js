@@ -6,15 +6,9 @@ import LoadingWheel from './LoadingWheel';
 const FlickrResultList = ({urls,search_tag, searching}) => {
 	let label = null;
 	let spinner = null;
-	let loading_list = "";
 
-	if (search_tag && !searching) {
-		label = `Showing results for "${search_tag}"...`;
-	}
-	if (searching) {
-		spinner = <LoadingWheel />;
-		loading_list = " loading-list";
-	}
+	if (search_tag && !searching) label = `Showing results for "${search_tag}"...`;
+	if (searching) spinner = <LoadingWheel />;
 
 	const items = urls.map((photo_url,i) => {
 		return ( 
@@ -29,7 +23,7 @@ const FlickrResultList = ({urls,search_tag, searching}) => {
 		<div>
 			<div className="search-result-label text-center"><h4>{label}</h4></div>
 			<div>{spinner}</div>
-			<div className={"search-result-list" + loading_list}>{items}</div>
+			<div className="search-result-list">{items}</div>
 		</div>
 	);
 }
